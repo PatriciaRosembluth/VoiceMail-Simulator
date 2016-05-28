@@ -2,7 +2,7 @@ package BusinessLogic;
 import java.util.ArrayList;
 
 public class PhoneBook {
-	private ArrayList<Contact> contacts;
+	public ArrayList<Contact> contacts;
 	
 	public PhoneBook(){
 		contacts = new ArrayList<Contact>();

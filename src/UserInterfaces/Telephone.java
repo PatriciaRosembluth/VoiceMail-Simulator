@@ -49,6 +49,12 @@ public class Telephone extends UserInterface
             c.hangup();
          else if (input.equalsIgnoreCase("Q"))
             more = false;
+         else if (input.equalsIgnoreCase("S")){
+        	 c.record(input);
+			 c.saveContact(c.currentRecording);
+			 c.currentRecording = "";
+			 c.speakToAllUIs(ActualConnection.CONTACT_MENU);
+         } 
          else if (input.length() == 1
             && "1234567890#".indexOf(input) >= 0)
             c.dial(input);
